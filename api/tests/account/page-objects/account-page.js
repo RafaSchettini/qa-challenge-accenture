@@ -26,6 +26,18 @@ class AccountPage {
       failOnStatusCode: false,
     });
   }
+
+  isAuthorized(credentials) {
+    return cy.request({
+      method: 'POST',
+      url: `${this.baseUrl}/Authorized`,
+      body: {
+        userName: credentials.userName,
+        password: credentials.password,
+      },
+      failOnStatusCode: false,
+    });
+  }
 }
 
 export default new AccountPage();

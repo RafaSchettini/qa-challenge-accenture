@@ -1,28 +1,11 @@
-import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
+import { When, Then } from '@badeball/cypress-cucumber-preprocessor';
 import AccountPage from '../page-objects/account-page.js';
-import DataGenerator from '../../../support/utils/data-generator.js';
-
-let userData;
-let userId;
-
-Given('que eu tenho um usuário cadastrado', () => {
-  userData = DataGenerator.generateUserData();
-  cy.log(`Dados do usuário gerados - Username: ${userData.userName}, Password: ${userData.password}`);
-
-  AccountPage.createUser(userData).then((response) => {
-    if (response.status === 201) {
-      userId = response.body.userID;
-      cy.log(`Usuário criado com ID: ${userId}`);
-      cy.wrap(response).as('userCreated');
-    } else {
-      throw new Error(`Falha ao criar usuário: ${response.status} - ${JSON.stringify(response.body)}`);
-    }
-  });
-});
 
 When('eu envio uma requisição para gerar o token de acesso', () => {
-  AccountPage.generateToken(userData).then((response) => {
-    cy.wrap(response).as('generateTokenResponse');
+  cy.get('@userData').then((userData) => {
+    AccountPage.generateToken(userData).then((response) => {
+      cy.wrap(response).as('generateTokenResponse');
+    });
   });
 });
 
