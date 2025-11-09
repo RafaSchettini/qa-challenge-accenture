@@ -1,0 +1,41 @@
+{
+  "name": "qa-challenge-accenture-api",
+  "version": "1.0.0",
+  "description": "Cypress API Test Automation with BDD and Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "open": "cypress open",
+    "test:headed": "cypress run --headed",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "bdd",
+    "api-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@faker-js/faker": "^10.1.0",
+    "cypress": "^13.6.0",
+    "esbuild": "^0.19.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/tests/**/step-definitions/**/*.js"
+    ],
+    "messages": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-messages.ndjson"
+    },
+    "json": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-report.json"
+    }
+  }
+}

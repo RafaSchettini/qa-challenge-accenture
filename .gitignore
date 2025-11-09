@@ -1,0 +1,10 @@
+node_modules/
+api/cypress/videos/
+api/cypress/screenshots/
+api/cypress/reports/
+frontend/cypress/videos/
+frontend/cypress/screenshots/
+frontend/cypress/reports/
+.DS_Store
+.env
+*.log
