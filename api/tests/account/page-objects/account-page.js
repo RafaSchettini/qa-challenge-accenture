@@ -38,6 +38,17 @@ class AccountPage {
       failOnStatusCode: false,
     });
   }
+
+  getUserDetails(userId, token) {
+    return cy.request({
+      method: 'GET',
+      url: `${this.baseUrl}/User/${userId}`,
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      failOnStatusCode: false,
+    });
+  }
 }
 
 export default new AccountPage();
