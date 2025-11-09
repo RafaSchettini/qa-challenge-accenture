@@ -1,20 +1,25 @@
 {
-  "name": "qa-challenge-accenture-api",
+  "name": "qa-challenge-accenture",
   "version": "1.0.0",
-  "description": "Cypress API Test Automation with BDD and Cucumber",
+  "type": "module",
+  "description": "QA Challenge Accenture - Automação de Testes API e Frontend",
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
+    "test:api": "cypress run --config-file cypress.config.js",
     "open": "cypress open",
     "test:headed": "cypress run --headed",
     "test:chrome": "cypress run --browser chrome",
-    "test:firefox": "cypress run --browser firefox"
+    "test:firefox": "cypress run --browser firefox",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "keywords": [
     "cypress",
     "cucumber",
     "bdd",
-    "api-testing"
+    "api-testing",
+    "e2e-testing"
   ],
   "author": "",
   "license": "ISC",
@@ -23,19 +28,22 @@
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "@faker-js/faker": "^10.1.0",
     "cypress": "^13.6.0",
-    "esbuild": "^0.19.0"
+    "esbuild": "^0.19.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-cypress": "^5.2.0",
+    "globals": "^16.5.0"
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": [
-      "cypress/tests/**/step-definitions/**/*.js"
+      "api/cypress/tests/**/step-definitions/**/*.js"
     ],
     "messages": {
       "enabled": true,
-      "output": "cypress/reports/cucumber-messages.ndjson"
+      "output": "api/cypress/reports/cucumber-messages.ndjson"
     },
     "json": {
       "enabled": true,
-      "output": "cypress/reports/cucumber-report.json"
+      "output": "api/cypress/reports/cucumber-report.json"
     }
   }
 }
