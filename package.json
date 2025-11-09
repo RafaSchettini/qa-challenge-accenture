@@ -35,15 +35,15 @@
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": [
-      "api/cypress/tests/**/step-definitions/**/*.js"
+      "api/tests/**/step-definitions/**/*.js"
     ],
     "messages": {
       "enabled": true,
-      "output": "api/cypress/reports/cucumber-messages.ndjson"
+      "output": "api/reports/cucumber-messages.ndjson"
     },
     "json": {
       "enabled": true,
-      "output": "api/cypress/reports/cucumber-report.json"
+      "output": "api/reports/cucumber-report.json"
     }
   }
 }

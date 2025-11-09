@@ -6,8 +6,8 @@ import { createEsbuildPlugin } from '@badeball/cypress-cucumber-preprocessor/esb
 export default defineConfig({
   e2e: {
     baseUrl: 'https://demoqa.com',
-    specPattern: 'api/cypress/tests/**/*.feature',
-    supportFile: 'api/cypress/support/e2e.js',
+    specPattern: 'api/tests/**/*.feature',
+    supportFile: 'api/support/e2e.js',
     async setupNodeEvents(on, config) {
       await addCucumberPreprocessorPlugin(on, config);
       on(
