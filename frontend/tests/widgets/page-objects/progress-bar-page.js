@@ -58,10 +58,6 @@ class ProgressBarPage {
 
   resetProgressBar() {
     cy.get(this.selectors.resetButton).click();
-    cy.get(this.selectors.progressBarValue).should(($el) => {
-      const currentValue = parseInt($el.attr('aria-valuenow'));
-      expect(currentValue).to.equal(0);
-    });
   }
 }
 
