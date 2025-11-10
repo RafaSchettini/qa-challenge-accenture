@@ -1,6 +1,6 @@
 # language: pt
 
-Funcionalidade: Testar Sortable
+Funcionalidade: Sortable
   Como usuário do site DemoQA
   Eu quero testar a funcionalidade de drag and drop
   Para validar a ordenação de elementos
