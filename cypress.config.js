@@ -8,6 +8,8 @@ export default defineConfig({
     baseUrl: 'https://demoqa.com',
     specPattern: ['api/tests/**/*.feature', 'frontend/tests/**/*.feature'],
     supportFile: 'api/support/e2e.js',
+    viewportWidth: 1920,
+    viewportHeight: 1080,
     async setupNodeEvents(on, config) {
       await addCucumberPreprocessorPlugin(on, config);
       on(

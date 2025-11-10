@@ -1,6 +1,6 @@
 import { Given, When } from '@badeball/cypress-cucumber-preprocessor';
 
-Given('que eu acesso a plataforma DemoQA', () => {
+Given('que eu estou dentro da plataforma DemoQA', () => {
   cy.visit('/', {
     failOnStatusCode: false,
     timeout: 240 * 1000,
@@ -11,4 +11,8 @@ Given('que eu acesso a plataforma DemoQA', () => {
 
 When('eu clico no menu {string}', (menuName) => {
   cy.get('.card').contains(menuName, { timeout: 240 * 100 }).should('be.visible').click();
+});
+
+When('clico no submenu {string}', (submenuOption) => {
+  cy.get('.menu-list li').contains(submenuOption).click();
 });
