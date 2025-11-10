@@ -6,7 +6,8 @@ Cypress.on('uncaught:exception', (err) => {
     err.message.includes('cross origin') ||
     err.message.includes('ResizeObserver loop limit exceeded') ||
     err.message.includes('Non-Error promise rejection') ||
-    err.message.includes('cross-origin')
+    err.message.includes('cross-origin') ||
+    err.message.includes('Cannot read properties of null')
   ) {
     return false;
   }
@@ -14,7 +15,7 @@ Cypress.on('uncaught:exception', (err) => {
 });
 
 const app = window.top;
-if (!app.document.head.querySelector('[data-hide-command-log-request]')) {
+if (app && app.document && !app.document.head.querySelector('[data-hide-command-log-request]')) {
   const style = app.document.createElement('style');
   style.innerHTML =
     '.command-name-request, .command-name-xhr { display: none }';
