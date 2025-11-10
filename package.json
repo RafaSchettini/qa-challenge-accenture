@@ -8,12 +8,7 @@
     "test": "cypress run",
     "test:api": "cypress run --config-file cypress.config.js --spec 'api/tests/**/*.feature'",
     "test:frontend": "cypress run --config-file cypress.config.js --spec 'frontend/tests/**/*.feature'",
-    "open": "cypress open",
-    "test:headed": "cypress run --headed",
-    "test:chrome": "cypress run --browser chrome",
-    "test:firefox": "cypress run --browser firefox",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "open": "cypress open"
   },
   "keywords": [
     "cypress",
@@ -41,11 +36,11 @@
     ],
     "messages": {
       "enabled": true,
-      "output": "api/reports/cucumber-messages.ndjson"
+      "output": "reports/cucumber-messages.ndjson"
     },
     "json": {
       "enabled": true,
-      "output": "api/reports/cucumber-report.json"
+      "output": "reports/cucumber-report.json"
     }
   }
 }

@@ -1,10 +1,9 @@
 node_modules/
 api/videos/
 api/screenshots/
-api/reports/
 frontend/videos/
 frontend/screenshots/
-frontend/reports/
+reports/
 .DS_Store
 .env
 *.log

@@ -1,13 +1,14 @@
 {
   "stepDefinitions": [
-    "api/tests/**/step-definitions/**/*.js"
+    "api/tests/**/step-definitions/**/*.js",
+    "frontend/tests/**/step-definitions/**/*.js"
   ],
   "messages": {
     "enabled": true,
-    "output": "api/reports/cucumber-messages.ndjson"
+    "output": "reports/cucumber-messages.ndjson"
   },
   "json": {
     "enabled": true,
-    "output": "api/reports/cucumber-report.json"
+    "output": "reports/cucumber-report.json"
   }
 }
