@@ -44,6 +44,13 @@ qa-challenge-accenture/
 - Node.js (versão 14 ou superior)
 - npm ou yarn
 
+### Extensões Recomendadas (VS Code)
+
+Para uma melhor experiência de desenvolvimento, recomendo a instalação das seguintes extensões no VS Code:
+
+- **Cucumber (Gherkin) Full Support** - Fornece suporte completo para sintaxe Gherkin, destacando features, cenários e steps
+- **ESLint** - Ferramenta de linting para JavaScript, ajudando a manter a qualidade e consistência do código
+
 ### Instalação
 
 1. Clone o repositório:
