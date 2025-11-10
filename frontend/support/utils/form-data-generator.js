@@ -36,4 +36,3 @@ class FormDataGenerator {
 }
 
 export default new FormDataGenerator();
-
