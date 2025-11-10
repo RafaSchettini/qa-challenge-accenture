@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "test:api": "cypress run --config-file cypress.config.js",
+    "test:api": "cypress run --config-file cypress.config.js --spec 'api/tests/**/*.feature'",
+    "test:frontend": "cypress run --config-file cypress.config.js --spec 'frontend/tests/**/*.feature'",
     "open": "cypress open",
     "test:headed": "cypress run --headed",
     "test:chrome": "cypress run --browser chrome",
@@ -35,7 +36,8 @@
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": [
-      "api/tests/**/step-definitions/**/*.js"
+      "api/tests/**/step-definitions/**/*.js",
+      "frontend/tests/**/step-definitions/**/*.js"
     ],
     "messages": {
       "enabled": true,
